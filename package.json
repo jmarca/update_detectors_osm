@@ -3,20 +3,21 @@
   "version": "1.0.0",
   "description": "Update the detector metadata from spatialvds to osm",
   "main": "index.js",
-  "config": {
-      "src_db":"spatialvds",
-      "src_host":"activimetrics.com",
-      "src_user":"slash",
-      "tgt_db":"test",
-      "tgt_host":"127.0.0.1",
-      "tgt_user":"slash"
+    "config": {
+        "root":"~+",
+    "src_db": "spatialvds",
+    "src_host": "activimetrics.com",
+    "src_user": "slash",
+    "tgt_db": "test",
+    "tgt_host": "127.0.0.1",
+    "tgt_user": "slash"
   },
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "sqitch:src_views":"deploy_src_views.sh",
-      "sqitch:tgt_deps":"deploy_tgt_twim.sh",
-      "update_detectors": "dump_updated_vds_to_osm.sh",
-      "sqitch:deploy":"npm run sqitch:tgt_deps && npm run sqitch:src_views"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sqitch:src_views": "deploy_src_views.sh",
+    "sqitch:tgt_deps": "deploy_tgt_twim.sh",
+    "update_detectors": "dump_updated_vds_to_osm.sh",
+    "sqitch:deploy": "npm run sqitch:tgt_deps && npm run sqitch:src_views"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/jmarca/update_detectors_osm/issues"
   },
-  "homepage": "https://github.com/jmarca/update_detectors_osm#readme"
+  "homepage": "https://github.com/jmarca/update_detectors_osm#readme",
+  "dependencies": {
+    "tvd": "github:jmarca/tvd",
+    "tvd_view": "github:jmarca/tvd_view",
+    "twim": "github:jmarca/twim"
+  }
 }
