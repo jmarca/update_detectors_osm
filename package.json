@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Update the detector metadata from spatialvds to osm",
   "main": "index.js",
-    "config": {
-        "root":"~+",
+  "config": {
+    "root": "~+",
     "src_db": "spatialvds",
     "src_host": "activimetrics.com",
     "src_user": "slash",
@@ -33,5 +33,6 @@
     "tvd": "github:jmarca/tvd",
     "tvd_view": "github:jmarca/tvd_view",
     "twim": "github:jmarca/twim"
-  }
+  },
+  "devDependencies": {}
 }
